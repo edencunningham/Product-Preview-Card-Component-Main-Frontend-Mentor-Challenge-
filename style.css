@@ -1,0 +1,148 @@
+:root {
+    --colorPrime: hsl(158, 36%, 37%);
+    --colorSec: hsl(30, 38%, 92%);
+}
+
+/* apply border-box to page */
+* {
+    /* universal selector */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    background-color: var(--colorSec);
+    width: 1200px;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    /* align-items: center; */
+    max-width: 550px;
+    height: 400px;
+}
+
+.left {
+    width: 50%;
+    background-image: url(images/image-product-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px 0 0 10px;
+}
+
+.right {
+    background-color: white;
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 0 10px 10px 0;
+}
+
+
+.attribution {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+h1 {
+    font-family: Fraunces;
+    line-height: 30px;
+}
+
+p {
+    font-size: 12px;
+    font-family: Montserrat;
+    line-height: 22px;
+    padding-top: 25px;
+    color: hsl(228, 12%, 48%);
+}
+
+.prices {
+    padding-top: 20px;
+    display: flex;
+    max-height: 49px;
+}
+
+.leftPrice {
+    color: var(--colorPrime);
+}
+
+.rightPrice {
+    justify-content: center;
+    padding-top: 5px;
+    padding-left: 15px;
+    font-family: Montserrat;
+    text-decoration: none;
+
+}
+
+.Perfume {
+    font-family: Montserrat;
+    padding: 10px 0;
+    font-size: 11px;
+    color: hsl(228, 12%, 48%);
+}
+
+button {
+    border: 1px solid var(--colorPrime);
+    border-radius: 6px;
+    background-color: var(--colorPrime);
+    color: white;
+    margin-top: 30px;
+    width: 230px;
+    height: 40px;
+}
+
+
+
+@media (max-width: 530px) {
+    main {
+        flex-direction: column;
+        height: 600px;
+        margin: 15px;
+    }
+
+    .box {
+        max-width: 330px;
+        height: 545px;
+    }
+
+    .left {
+        width: 100%;
+        height: 35%;
+        background-image: url(images/image-product-mobile.jpg);
+        border-radius: 10px 10px 0 0;
+    }
+
+    .right {
+        width: 100%;
+        height: 65%;
+        border-radius: 0 0 10px 10px;
+    }
+
+    button {
+        width: 290px;
+    }
+
+}
